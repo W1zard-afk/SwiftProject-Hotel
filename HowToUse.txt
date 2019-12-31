@@ -1,0 +1,63 @@
+1. Client operations
+* To create or update client use the following method:
+POST JSON to http://localhost:8080/createOrUpdateClient after run the project in Spring tool.
+Parameters for create:
+{
+  	"firstName":"Lanna",
+  	"lastName":"Pavlova"
+}
+
+Parameters for Update/Edit:
+{
+  	"id":"6",
+  	"firstName":"Lanna",
+  	"lastName":"Pavlova6"
+}
+
+* To get clients by ID:
+GET request to http://localhost:8080/getClientById/{id}
+
+* To get clients by FirstName:
+GET request to http://localhost:8080/getClientByName/{first_name}
+
+* To delete clients by ID 
+POST JSON to http://localhost:8080/deleteClientById
+Parameters for delete
+{
+  	"id":4
+}
+
+2. Reservation operations
+* To create or update reservation use the following method:
+POST JSON to http://localhost:8080/createOrUpdateReservation
+Parameters for create:
+{
+  	"checkIn":"2020-03-11",
+  	"checkOut":"2020-04-02",
+  	"client":{
+      "id":"25"
+    },
+  
+  "room": {
+        "id":"2"
+  
+}
+}
+
+Parameters for update:
+{
+  	"id":"48",
+  	"checkIn":"2020-03-11",
+  	"checkOut":"2020-04-02",
+  	"client":{
+      "id":"25"
+    },
+  
+  "room": {
+        "id":"2"
+  
+}
+}
+
+* To get reservations by ID:
+GET request to http://localhost:8080/getReservationById/{id}
